@@ -388,7 +388,6 @@ C:\Users\olegp\source\repos\ASPNET_Site_1\obj\Debug\net9.0\compressed\iw9002mwmk
 C:\Users\olegp\source\repos\ASPNET_Site_1\obj\Debug\net9.0\compressed\5yc9wsbv9a-muycvpuwrr.gz
 C:\Users\olegp\source\repos\ASPNET_Site_1\obj\Debug\net9.0\compressed\ggzrw9eq3n-87fc7y1x7t.gz
 C:\Users\olegp\source\repos\ASPNET_Site_1\bin\Debug\net9.0\Properties\appsettings.Development.json
-C:\Users\olegp\source\repos\ASPNET_Site_1\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\olegp\source\repos\ASPNET_Site_1\bin\Debug\net9.0\appsettings.json
 C:\Users\olegp\source\repos\ASPNET_Site_1\obj\Debug\net9.0\compressed\bmp2t1llrp-kdq3dob7jx.gz
 C:\Users\olegp\source\repos\ASPNET_Site_1\obj\Debug\net9.0\compressed\kn1dsseh60-kdq3dob7jx.gz

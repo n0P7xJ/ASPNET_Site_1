@@ -3,7 +3,7 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
     @foreach (var item in Model)
     {
-        string image = item.Images[0];
+        string image = item.Images?.FirstOrDefault() ?? "default.jpg";
         var modalId = $"confirmDeleteModal_{item.Id}";
 
         <div class="col">
@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="position-absolute top-0 end-2 pt-3 ps-3 delete-btn">
-                    <a asp-action="Edit" asp-route-id="@item.Id" asp class="btn btn-success">
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">
                         <i class="fas fa-pencil"></i>
                     </a>
                 </div>
@@ -25,12 +25,10 @@
                         <i class="fas fa-trash-alt"></i>
                     </button>
                 </div>
-
             </div>
         </div>
 
-
-        <div class="modal fade" id="@modalId" tabindex="-1">
+        <div class="modal fade" id="@modalId" tabindex="-1" aria-labelledby="label_@item.Id" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -38,12 +36,12 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        Ви дійсно хочете видалити категорію <strong>@item.Name</strong>?
+                        Ви дійсно хочете видалити товар <strong>@item.Name</strong>?
                     </div>
                     <div class="modal-footer">
-                        <form asp-action="Delete">
+                        <form asp-action="Delete" asp-route-id="@item.Id">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Скасувати</button>
-                            <button type="submit" class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Видалити</button>
+                            <button type="submit" class="btn btn-danger">Видалити</button>
                         </form>
                     </div>
                 </div>
